@@ -1,11 +1,12 @@
 module.exports = function(eleventyConfig) {
-  // Passthrough copy for CSS files
+  // Pass through copy for CSS or other assets if needed
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/images"); // If you have images
 
   return {
     dir: {
       input: "src",
-      output: "dist"
+      output: "docs" // Change this from 'dist' to 'docs'
     }
   };
 };
